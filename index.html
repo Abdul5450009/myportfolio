@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth; /* Enables smooth scrolling */
+        }
+        body {
+            background-color: black;
+            color: white;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            flex-wrap: wrap;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+        }
+        .content {
+            max-width: 50%;
+        }
+        .content h1 {
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .content p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .btn {
+            background-color: white;
+            color: black;
+            padding: 12px 24px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .profile {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+        }
+        .profile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .about, .services {
+            padding: 50px 20px;
+        }
+        .about h1, .services h2 {
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .services h2 {
+            font-size: 35px;
+        }
+        .service-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .service-box {
+            background-color: white;
+            color: black;
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .service-box img {
+            width: 50px;
+            height: 50px;
+        }
+        .service-box h3 {
+            margin: 10px 0;
+        }.contact-section {
+            padding: 50px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .contact-section h1 {
+            font-size: 36px;
+            font-weight: bold;
+        }
+        .contact-section p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+        /* Social Media Links */
+        .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between circles */
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5); /* Soft glow effect */
+}
+
+.social-icon img {
+    width: 60%;  /* Adjust the size of the icon inside */
+    height: 60%;
+    object-fit: contain; /* Ensure icons fit well */
+}
+
+        /* Smooth Scroll for Navigation */
+        .nav-link {
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+        }
+
+        @media (max-width: 1024px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .content {
+                max-width: 100%;
+            }
+            .profile {
+                margin-top: 20px;
+            }
+        }
+        @media (max-width: 768px) {
+            .services h2 {
+                text-align: center;
+            }
+            .service-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+            .navbar div {
+                margin-bottom: 10px;
+            }
+            .container {
+                padding: 30px;
+            }
+
+            .contact-section {
+                align-items: center;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div>Abdul Muqeet</div>
+        <div>
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#contact">Contact</a>
+            <a href="#services">Services</a>
+        </div>
+    </div>
+    <div id="home" class="container">
+        <div class="content">
+            <h1>WELCOME</h1>
+            <p>I am Abdul Muqeet, a basic website creator with a passion for learning new things.</p>
+            <a href="Professional CV Resume.pdf" download>
+                <button class="btn">Download CV</button>
+            </a>
+        </div>
+        <div class="profile">
+            <img src="pfp.jpg" alt="Profile Picture">
+        </div>
+    </div>
+    <div id="about" class="about">
+        <h1>About Me</h1>
+        <p>
+            I am Abdul Muqeet, a passionate web developer dedicated to creating clean, responsive, and user-friendly websites. I enjoy learning new technologies and improving my skills to build better digital experiences. With a strong foundation in HTML and CSS, I focus on delivering visually appealing and functional designs. My goal is to provide professional and creative web solutions while continuously growing in the field.
+        </p>
+    </div>
+    <div id="services" class="services">
+        <h2>Services</h2>
+        <div class="service-container">
+            <div class="service-box">
+                <img src="computer.png" alt="Service Icon">
+                <h3>Web Development</h3>
+                <p>Building responsive and functional websites.</p>
+            </div>
+            <div class="service-box">
+                <img src="ui.png" alt="Service Icon">
+                <h3>UI/UX Design</h3>
+                <p>Creating user-friendly interfaces with great experiences.</p>
+            </div>
+            <div class="service-box">
+                <img src="seo.png" alt="Service Icon">
+                <h3>SEO Optimization</h3>
+                <p>Enhancing your website’s visibility on search engines.</p>
+            </div>
+        </div>
+    </div> <!-- Navigation Link for Smooth Scrolling -->
+    <a href="#contact" class="nav-link"></a>
+
+    <!-- Contact Section -->
+    <div id="contact" class="contact-section">
+        <h1>Contact Me</h1>
+        <p>Phone number : +92-326-424-3320</p>
+        <p>Email : F2023332001@umt.edu.pk</p>
+    </div>
+
+    <!-- Social Media Links (Footer) -->
+    <div class="social-links">
+    <a href="https://instagram.com/YOUR_USERNAME" target="_blank" class="social-icon">
+        <img src="instagram.png" alt="">
+    </a>
+    <a href="https://youtube.com/YOUR_CHANNEL" target="_blank" class="social-icon">
+        <img src="youtube.png" alt="">
+    </a>
+    <a href="https://facebook.com/YOUR_PROFILE" target="_blank" class="social-icon">
+        <img src="facebook.png" alt="">
+    </a>
+</div>
+
+</body>
+</html>
